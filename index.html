@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>오디움 Odium</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="어센틱심볼 선발대인지 확인하세요">
+    <meta property="og:title" content="오디움">
+    <meta property="og:description" content="선발대 심볼">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/css/images/odium.png"
+    />
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+      <div id="bg"></div>
+      <div id="overlay"></div>
+      <div id="main">
+        <!-- Header -->
+        <header id="header">
+          <nav>
+            <ul>
+              <li>
+                <img src="assets/css/images/odium.png"/><span id="level" class="level"></span>
+              </li>
+            </ul>
+          </nav>
+          <p id="nowValue" class="nowValue"></p>
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <span class="copyright"
+            >&copy; memoday <a href="https://github.com/memoday">Github</a> &MediumSpace;|&MediumSpace; Aurora <a href="https://maple.gg/u/창일">창일</a> &MediumSpace;|&MediumSpace; Aerial by <a href="http://html5up.net">HTML5 UP</a>.</span
+          >
+        </footer>
+      </div>
+    </div>
+    <script>
+
+
+function setValue(){
+    var nowValue = 550; //현재 성장치
+    var i = 0;
+    let maxLevel = [0,29,76,141,224,325,444,581,736,909,1100];
+    var nowLevel = i; //심볼 레벨
+    const addition = 0; //심볼 선택권, 코인샵 등 타 경로를 통해 획득한 심볼 개수
+    let publishedDate = new Date("2022/12/09");
+    var today = new Date();
+    
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //1월 = 0
+    var yyyy = today.getFullYear();
+    if(dd<10) {
+        dd='0'+dd
+    } 
+    if(mm<10) {
+        mm='0'+mm
+    } 
+    today = new Date(yyyy+'/'+mm+'/'+dd)
+
+    var difference = Math.abs(today-publishedDate);
+    difference = difference/(1000*3600*24)
+
+    var dailyCount = difference*5; //일퀘 5개
+
+    nowValue = nowValue + addition + dailyCount;
+
+    while (nowValue > maxLevel[i]){
+        nowValue = nowValue - maxLevel[i];
+        i++;
+        nowLevel = i;
+    }
+
+    document.getElementById('level').innerHTML = "Lv."+nowLevel;
+    if (i>=11){
+      var result = 'COMPLETE!';
+      document.getElementById('nowValue').style.color = 'yellow';
+      document.getElementById('nowValue').style.fontWeight = 'bold';
+      document.getElementById('nowValue').innerHTML = result;
+      return;
+
+    } else {
+    var result = nowValue+'/'+maxLevel[i];
+    }
+    document.getElementById('nowValue').innerHTML = result;
+}
+
+      window.onload = function () {
+        setValue();
+        document.body.classList.remove("is-preload");
+      };
+      window.ontouchmove = function () {
+        return false;
+      };
+      window.onorientationchange = function () {
+        document.body.scrollTop = 0;
+      };
+    </script>
+  </body>
+</html>
