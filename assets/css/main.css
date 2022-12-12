@@ -819,6 +819,7 @@ a:hover {
   -o-animation: fadein 0.3s; /* Opera */
 }
 
+
 #header nav a:before {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
@@ -857,6 +858,28 @@ a:hover {
 
 #header nav a span {
   display: none;
+}
+
+#log {
+  display: none;
+  position: absolute;
+  width: 230px;
+  height: 100px;
+  top: 150%;
+  left: 50%;
+  overflow: visible;
+  white-space: nowrap;
+  color: white;
+  transform: translate(-50%,-50%);
+}
+
+#log li{
+  float: left;
+  opacity: 90%;
+  font-weight: 500;
+  font-size: 14px;
+  color:white;
+  font-family: "Noto Sans"
 }
 
 /* Footer */

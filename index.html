@@ -16,7 +16,7 @@
     <meta property="og:title" content="오디움 Odium" />
     <meta
       property="og:description"
-      content="메이플스토리 오디움 선발대 정보 제공"
+      content="메이플스토리 선발대 정보 제공"
     />
     <meta
       property="og:image"
@@ -27,7 +27,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="./assets/css/images/odium.png"
+      href="assets/css/images/odium.png"
     />
   </head>
   <body class="is-preload">
@@ -40,14 +40,17 @@
           <nav>
             <ul>
               <li>
-                <img src="assets/css/images/odium.png" /><span
+                <img id="symbol1" src="assets/css/images/odium.png" /><span
                   id="level"
-                  class="level"
                 ></span>
               </li>
             </ul>
           </nav>
           <p id="nowValue" class="nowValue"></p>
+          <div id="log">
+            <ul>
+            </ul>
+          </div>
         </header>
 
         <!-- Footer -->
@@ -64,7 +67,34 @@
       </div>
     </div>
     <script>
+      let odium = document.getElementById("symbol1");
+
+  odium.addEventListener("mouseover", function (event) {
+    document.getElementById("log").style.display = "block";
+  }, false);
+
+  odium.addEventListener("mouseout", function (event) {
+    document.getElementById("log").style.display = "none";
+  }, false); 
+
+    </script>
+    <script>
       function setValue() {
+        var xmlHttpRequests;
+        if(window.XMLHttpRequest){// code for Firefox, Mozilla, IE7, etc.
+	        xmlHttpRequest = new XMLHttpRequest();
+        }else{
+          return;
+        }
+
+        xmlHttpRequest.open('HEAD', window.location.href.toString(), false);
+        xmlHttpRequest.setRequestHeader("ContentType", "text/html");
+        xmlHttpRequest.send('');
+
+        var serverDate = xmlHttpRequest.getResponseHeader("Date");
+        var today = new Date(serverDate); //오늘 날짜
+
+
         var nowValue = 742; //2022.12.09 기준 성장치 742개
         var i = 0;
         let maxLevel = [0, 29, 76, 141, 224, 325, 444, 581, 736, 909, 1100]; //레벨별 필요 성장치
@@ -72,7 +102,6 @@
         const addition = 0; //심볼 선택권 등 타 경로를 통해 획득한 심볼 개수
         const coinShop = 0; //코인샵 심볼 개수, 코인샵 종료시 addition으로 값 이동, 표기도 따로 함
         let publishedDate = new Date("2022/12/09");
-        var today = new Date();
 
         var dd = today.getDate();
         var mm = today.getMonth() + 1; //1월 = 0
