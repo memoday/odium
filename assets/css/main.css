@@ -358,6 +358,8 @@ a:hover {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
+
+  background: #348cb2 url("images/bg.jpg") bottom left;
   background-repeat: repeat-x;
   height: 100%;
   left: 0;
@@ -365,15 +367,6 @@ a:hover {
   position: fixed;
   top: 0;
   filter: brightness(50%);
-}
-.bg-odium{
-  background: #348cb2 url("images/bg-odium.jpg") bottom left;
-}
-.bg-arcus{
-  background: #d5a11e url("images/bg-arcus.png") bottom left;
-}
-.bg-cernium{
-  background: #348cb2 url("images/bg-cernium.png") bottom left;
 }
 
 @-moz-keyframes bg {
@@ -819,7 +812,7 @@ a:hover {
   display: block;
   position: absolute;
   margin-top: 5%;
-  margin-left: 37%;
+  margin-left: 39%;
   animation: fadein 0.3s;
   -moz-animation: fadein 0.3s; /* Firefox */
   -webkit-animation: fadein 0.3s; /* Safari and Chrome */
@@ -921,38 +914,6 @@ a:hover {
   text-align: center;
   width: 100%;
 }
-
-#footer2 {
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.2) 10%,
-    rgba(0, 0, 0, 0)
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5) 75%,
-    rgba(0, 0, 0, 0)
-  );
-  background-image: linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5) 75%,
-    rgba(0, 0, 0, 0)
-  );
-  top: 0em;
-  cursor: default;
-  height: 6em;
-  left: 0;
-  line-height: 5em;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
 
 /* Wide */
 
