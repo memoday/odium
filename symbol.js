@@ -18,7 +18,7 @@ function setValue() {
   var i = 0;
   let maxLevel = [0, 29, 76, 141, 224, 325, 444, 581, 736, 909, 1100]; //레벨별 필요 성장치
   var nowLevel = i; //심볼 레벨
-  const addition = 80; //심볼 선택권 등 타 경로를 통해 획득한 심볼 개수
+  const addition = 0; //심볼 선택권 등 타 경로를 통해 획득한 심볼 개수
   const coinShop = 0; //코인샵 심볼 개수, 코인샵 종료시 addition으로 값 이동, 표기도 따로 함
   let publishedDate = new Date("2022/12/09");
 
