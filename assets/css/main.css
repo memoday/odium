@@ -914,12 +914,13 @@ a:hover {
   );
   bottom: 0;
   cursor: default;
-  height: 6em;
+  height: 5em;
   left: 0;
   line-height: 8em;
   position: absolute;
   text-align: center;
   width: 100%;
+  font-size: 90%;
 }
 
 #footer2 {
