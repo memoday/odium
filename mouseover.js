@@ -3,7 +3,7 @@ let logStyle = document.getElementById("log").style;
 
 odium.addEventListener("mouseover", function (event) {
   logStyle.display = "block";
-  logStyle.animation = "fadein 1s";
+  logStyle.animation = "fadein .3s";
 }, false);
 
 odium.addEventListener("mouseout", function (event) {
