@@ -1,0 +1,65 @@
+html,body {
+    background-color: #1b1d25;
+    margin: 0;
+    padding:0;
+    border: 0;
+}
+
+#wrapper {
+    margin: 0;
+    width: 100vw;
+    height:100vh;
+}
+
+#box {
+    margin: 0 auto;
+    top: 30vh;
+    width:100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    vertical-align: center;
+}
+
+a{
+    color: #6f7486;
+    text-decoration: none;
+}
+
+h1 {
+    color: #e6e9f3;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    margin:0;
+    text-align: center;
+    color:#e6e9f3;
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 4s linear infinite;
+}
