@@ -218,6 +218,14 @@ a:hover {
 
 #level {
   display: none;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 37%;
+}
+
+#level.active {
+  display: block !important;
+  animation: fadein .3s !important;
 }
 
 /* Icon */
@@ -816,17 +824,6 @@ a:hover {
   transform: scale(1.2);
 }
 
-#header nav img:hover + #level {
-  display: block;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 37%;
-  animation: fadein 0.3s;
-  -moz-animation: fadein 0.3s; /* Firefox */
-  -webkit-animation: fadein 0.3s; /* Safari and Chrome */
-  -o-animation: fadein 0.3s; /* Opera */
-}
-
 
 #header nav a:before {
   -moz-transition: all 0.2s ease-in-out;
@@ -891,8 +888,8 @@ a:hover {
 }
 
 #log.active{
-  display: flex;
-  animation: fadein .3s;
+  display: flex !important;
+  animation: fadein .3s !important;
 }
 
 /* Footer */
