@@ -889,6 +889,11 @@ a:hover {
   font-family: "Noto Sans"
 }
 
+#log.active{
+  display: flex;
+  animation: fadein .3s;
+}
+
 /* Footer */
 
 #footer {
