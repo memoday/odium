@@ -159,6 +159,7 @@ textarea {
   appearance: none;
 } */
 
+
 /* Basic */
 
 html {
@@ -190,7 +191,6 @@ body.is-preload *:after {
 }
 
 body,
-input,
 select,
 textarea {
   color: #fff;
@@ -211,16 +211,28 @@ a {
   outline: 0;
   text-decoration: none;
 }
+a.btn{
+  border-bottom: none;
+}
 
 a:hover {
   border-color: transparent;
+}
+a.btn:hover{
+  border-bottom: none;
+  color: yellow;
+  transition: .5s;
+}
+a.btn.btn_focus{
+  color: gold;
+  transition: .5s;
 }
 
 #level {
   display: none;
   position: absolute;
   margin-top: 5%;
-  margin-left: 37%;
+  margin-left: 36%;
 }
 
 #level.active {
@@ -881,8 +893,7 @@ a:hover {
 #log li{
   float: left;
   opacity: 90%;
-  font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   color:white;
   font-family: 'Noto Sans KR', sans-serif;
 }

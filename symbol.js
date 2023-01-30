@@ -1,3 +1,7 @@
+var addition100 = 0; //코인샵, 심볼 선택권 등 이벤트를 통해 획득한 심볼. 이벤트 종료 후 etc로 이동
+var addition80 = 0;
+const etc = 0;
+
 function setValue() {
   var xmlHttpRequests;
   if(window.XMLHttpRequest){// code for Firefox, Mozilla, IE7, etc.
@@ -18,8 +22,6 @@ function setValue() {
   var i = 0;
   let maxLevel = [0, 29, 76, 141, 224, 325, 444, 581, 736, 909, 1100]; //레벨별 필요 성장치
   var nowLevel = i; //심볼 레벨
-  const addition = 0; //심볼 선택권 등 타 경로를 통해 획득한 심볼 개수
-  const coinShop = 0; //코인샵 심볼 개수, 코인샵 종료시 addition으로 값 이동, 표기도 따로 함
   let publishedDate = new Date("2022/12/09");
 
   var dd = today.getDate();
@@ -38,8 +40,8 @@ function setValue() {
 
   var dailyCount = difference * 5; //일퀘 5개 //10개로 언제 늘어남?
 
-  nowValue = nowValue + addition + dailyCount + coinShop;
-  console.log(nowValue);
+  nowValue = nowValue + dailyCount + addition100 + addition80 + etc;
+  // console.log(nowValue);
 
   while (nowValue > maxLevel[i]) {
     nowValue = nowValue - maxLevel[i];
@@ -58,4 +60,63 @@ function setValue() {
     var result = nowValue + "/" + maxLevel[i];
   }
   document.getElementById("nowValue").innerHTML = result;
+}
+
+oneHundred = document.getElementById("oneHundred");
+eighty = document.getElementById("eighty");
+
+valueBool = localStorage.getItem("valueToggle100");
+valueBool = valueBool == "true";
+
+valueBool2 = localStorage.getItem("valueToggle80");
+valueBool2 = valueBool2 == "true";
+
+if (valueBool == null){
+  console.log('valueBool = null')
+  valueBool = false;
+}
+
+if (valueBool2 == null){
+  console.log('valueBool = null')
+  valueBool2 = false;
+}
+
+valueBool = !valueBool;
+valueToggle100();
+
+valueBool2 = !valueBool2;
+valueToggle80();
+
+function valueToggle100() {
+  valueBool = valueBool ? false : true;
+
+  if (valueBool == true){
+    addition100 = 100;
+    oneHundred.classList.add("btn_focus");
+    setValue();
+    localStorage.setItem("valueToggle100",true);
+  }
+  if (valueBool == false){
+    addition100 = 0;
+    oneHundred.classList.remove("btn_focus");
+    setValue();
+    localStorage.setItem("valueToggle100",false);
+  }
+}
+
+function valueToggle80() {
+  valueBool2 = valueBool2 ? false : true;
+
+  if (valueBool2 == true){
+    addition80 = 80;
+    eighty.classList.add("btn_focus");
+    setValue();
+    localStorage.setItem("valueToggle80",true);
+  }
+  if (valueBool2 == false){
+    addition80 = 0;
+    eighty.classList.remove("btn_focus");
+    setValue();
+    localStorage.setItem("valueToggle80",false);
+  }
 }
