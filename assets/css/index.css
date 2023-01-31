@@ -232,7 +232,7 @@ a.btn.btn_focus{
   display: none;
   position: absolute;
   margin-top: 5%;
-  margin-left: 36%;
+  margin-left: 33%;
 }
 
 #level.active {
@@ -833,7 +833,10 @@ a.btn.btn_focus{
 }
 
 #header nav img:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+}
+#header nav img:active:not(:focus) {
+  transform: scale(1.0);
 }
 
 
