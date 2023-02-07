@@ -1,6 +1,7 @@
 var addition100 = 0; //코인샵, 심볼 선택권 등 이벤트를 통해 획득한 심볼. 이벤트 종료 후 etc로 이동
 var addition80 = 0;
 const etc = 0;
+var addition = addition100 + addition80 + etc;
 
 function setValue() {
   var xmlHttpRequests;
@@ -40,7 +41,7 @@ function setValue() {
 
   var dailyCount = difference * 5; //일퀘 5개 //10개로 언제 늘어남?
 
-  nowValue = nowValue + dailyCount + addition100 + addition80 + etc;
+  nowValue = nowValue + dailyCount + addition;
   // console.log(nowValue);
 
   while (nowValue > maxLevel[i]) {
@@ -77,7 +78,7 @@ if (valueBool == null){
 }
 
 if (valueBool2 == null){
-  console.log('valueBool = null')
+  console.log('valueBool2 = null')
   valueBool2 = false;
 }
 
