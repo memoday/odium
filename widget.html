@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>오디움 위젯 - odium.kr</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="description" content="오늘의 선발대 심볼 도우미" />
+		<meta name="keywords" content="메이플스토리, 메이플, 오디움, 심볼, 선발대"/>
+		<meta property="og:title" content="오디움 위젯 - odium.kr" />
+		<meta property="og:description" content="오늘의 선발대 심볼 도우미"/>
+		<meta property="og:image" content="https://raw.githubusercontent.com/memoday/odium/main/assets/css/images/thumbnail.png"/>
+		<meta property="og:url" content="https://odium.kr" />
+		<meta property="og:site_name" content="오디움 위젯 - odium.kr"/>
+		<meta name="google-site-verification" content="waWbKjK6VY9Qe_pi9fNiEtrYbEbr3lTCnZnHz2bwF2c" />
+		<meta name="naver-site-verification" content="28efa2682c52808c354bcf316c13332723111c1e" />
+		<link rel="stylesheet" href="assets/css/widget.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link 
+		rel="shortcut icon"
+		type="image/x-icon"
+		href="assets/css/images/symbol-changil.png"
+	  />
+	</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2XB0TQM81"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9233910178763395"
+	crossorigin="anonymous"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-Q2XB0TQM81');
+</script>
+	<body class="is-preload">
+		<!-- Header -->
+		<div id="video-container">
+			<video autoplay loop muted plays-inline>
+				<source src="/assets/css/videos/karing1080.mp4">
+			</video>
+		</div>
+			<header id="header" class="overflow">
+				<div class="content">
+					<h1><a href="#">오디움 Odium 위젯</a></h1>
+					<p>오늘의 선발대 심볼 도우미</p>
+					<ul class="actions">
+						<li><a href="#" class="button primary icon solid fa-download">배포 예정</p></a></li>
+						<li><a href="#one" class="button icon solid fa-chevron-down scrolly">더 알아보기</a></li>
+					</ul>
+				</div>
+			</header>
+		<!-- One -->
+			<section id="one" class="suho special">
+				<div id = "trans" style="opacity: 0; transition: all 1.5s;">
+					<!-- <img src="assets/css/images/symbol-changil.png" style="width: 150px;height:150px;">
+					<h4 style="color: whitesmoke;">Q. 오늘자 나의 심볼 개수는?</h4>
+					<input type="text" value="" placeholder=""/> -->
+					<img class="floating" src="assets/css/images/odiumWidget200.png">
+				</div>
+			</section>
+			<script>
+				let observer = new IntersectionObserver((e)=>{
+					e.forEach((box)=>{
+						if (box.isIntersecting){
+							box.target.style.opacity = 1;
+						}
+					})
+				})
+				let div = document.querySelectorAll('#trans')
+				observer.observe(div[0])
+			</script>
+			
+		<!-- Two -->
+			<section id="two" class="wrapper">
+				<div class="inner alt">
+					<section class="spotlight">
+						<div class="content">
+							<h3>선발대 필수 프로그램</h3>
+							<p>정신없는 하루를 보낸 당신을 위한 선발대 심볼 위젯<br>이제 바탕화면에서 빠르게 선발대 심볼 현황을 확인하세요!<br><br>후발대 NO! 후후발대 NO! NO!</p>
+						</div>
+						<div><img src="assets/css/images/odiumWidget200.png" alt="" /></div>
+					</section>
+
+					<section class="spotlight">
+						<div style="width: 100%;overflow: hidden;height: 25vh;">
+							<ul id="list" class="cf">
+							  <li>
+								<figure class="active">
+								  <figcaption>
+									<img src="https://odium.kr/assets/css/images/symbol-cernium.png">
+									<h2>Cernium</h2>
+									<p>세르니움</p>
+								  </figcaption>
+								</figure>
+							  </li>
+					  
+							  <li>
+								<figure>
+								  <figcaption>
+									<img src="https://odium.kr/assets/css/images/symbol-arcus.png">
+									<h2>Arcus</h2>
+									<p>아르크스</p>
+								  </figcaption>
+								</figure>
+							  </li>
+					  
+							  <li>
+								<figure>
+								  <figcaption>
+									<img src="https://odium.kr/assets/css/images/symbol-odium.png">
+									<h2>Odium</h2>
+									<p>오디움</p>
+								  </figcaption>
+								</figure>
+							  </li>  
+							</ul>
+						  </div>
+					</section>
+
+					<section class="special">
+						<ul class="icons labeled">
+							<li><span class="icon solid fa-sync"><span class="label">심볼정보 자동 갱신</span></span></li>
+							<li><span class="icon solid fa-memory"><span class="label">낮은 램 점유율</span></span></li>
+							<li><span class="icon solid fa-desktop"><span class="label">시작프로그램 등록</span></span></li><br>
+							<li><span class="icon solid fa-image"><span class="label">위젯 배경 커스텀</span></span></li>
+							<li><span class="icon solid fa-font"><span class="label">위젯 폰트 커스텀</span></span></li>
+						</ul>
+					</section>
+					<section class="spotlight">
+						<div class="content">
+							<h3>자주 묻는 질문 Q&A</h3><br>
+
+							<p>Q. 위젯 사용으로 정지 당할 가능성은 없나요?<br>A: 오디움 위젯은 게임사 승인을 받지 않은 개인이 제작한 프로그램입니다. 넥슨 운영정책에 위배되는 부분은 없다고 판단되나 모든 책임은 사용자에게 있습니다. 자세한 내용은 아래 기술되어 있습니다.</p>
+							<p>Q. 안전하게 사용할 수 있는 프로그램인가요?<br>A: 바이러스가 없으며 단순히 <a href="https://odium.kr" target="_blank" rel="noopener noreferer" >odium.kr</a>를 불러오는 프로그램으로 다른 프로그램에 직접적인 영향을 끼치지 않습니다.</p>
+							<p>Q. 오디움 실행 시 Windows PC 보호 창이 뜹니다.<br>A: PC 보호 창에서 '추가 정보' > '실행'을 눌러주시면 정상적으로 실행 됩니다.</p>
+							<P>Q. 위젯에서 Error가 표시됩니다.<br>A: 인터넷 접속이 원할한지 확인 후 위젯 우클릭을 통해 '수동 갱신'을 클릭해주시길 바랍니다.</P>
+							<p>Q. 프로그램은 언제 배포하나요?<br>A: 2월 중으로 목표하고 있습니다.</p>
+							<br>
+							<p> 더 자세한 내용은 <a href="https://github.com/memoday/odiumWidget" target="_blank" rel="noopener noreferer" >Github</a>에서 확인이 가능합니다.</p>
+						</div>
+					</section>
+					<section class="spotlight">
+						<div class="content">
+							<h3>면책 조항</h3>
+
+							<p>- 오디움 위젯 및 사이트는 넥슨 코리아와 무관하며 게임사로부터 승인을 받지 않은 프로그램입니다.</p>
+							<p>- 오디움 위젯을 사용하면서 생기는 모든 불이익은 사용자 본인에게 있습니다.</p>
+							<pre>[4-4] 비정상적인 게임이용 행위 (2022년 08월 05일 시행 기준)<br><br><code>① 저작권 소유자에게 저작권 사용을 허가 받지 않은 프로그램 · 하드웨어를 제작 · 유포하는 경우<br>② 공식적으로 배포한 것과 다른 형태의 프로그램으로 위변조 하거나 위변조 된 프로그램을 제작 · 유포하는 경우<br>③ 특정한 형태의 조작을 반복해 주거나, 게임에서 제공하지 않는 등의 형태로 게임이 작동하도록 하는 프로그램 · 하드웨어를 제작 · 유포하는 경우<br>④ 게임의 실행 · 이용 과정에 영향을 주는 프로그램 · 하드웨어를 제작 · 유포하는 경우<br>⑤ 게임의 클라이언트 데이터 또는 네트워크 패킷을 저장 · 감청 · 수정하는 방법을 유포하는 경우<br>⑥ 다른 고객의 정보를 저장 · 감청 · 수집하는 프로그램이나 하드웨어를 제작 · 유포하는 경우<br>⑦ 게임 서버나 홈페이지의 정보를 수정하거나 열람하는 프로그램 · 하드웨어를 제작 · 유포하는 경우<br>⑧ 비인가 프로그램 · 하드웨어를 다른 고객에게 알리거나, 다른 고객으로부터 제공받으려고 시도하는 경우<br>⑨ 게임의 클라이언트 데이터 또는 네트워크 패킷을 저장 · 감청 · 수정하는 프로그램 · 하드웨어를 제작 · 유포하는 경우
+							<br>※ 이 외 게임 이용에 영향을 줄 수 있는 비인가 프로그램을 제작 · 유포하는 경우
+							</code></pre>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2 special">
+				<header class="major">
+					<h3>오디움 배경 이미지 가이드</h3>
+					<h5>사용 폰트 Noto Sans KR</h5>
+					<h7>배경 최대 크기 300x300<br>기본 배경 크기 150x200</h7>
+				</header>
+				<ul class="actions special">
+					<li><a href="https://fonts.google.com/download?family=Noto%20Sans%20KR" target="_blank" rel="noopener noreferer" class="button primary icon solid fa-download">Noto_Sans_KR.zip</a></li>
+					<li><a href="https://drive.google.com/uc?export=download&id=1--5yd00GURVdei_3TvEkN7Niw5C-VGFf" target="_blank" rel="noopener noreferer" class="button primary icon solid fa-download">OdiumBG_Guide.psd</a></li>
+				</ul>
+			</section>
+			
+
+		<!-- Footer -->
+			<footer id="footer">
+				<h1><a href="https://odium.kr">Odium.kr</a></h1>
+				<p class="copyright">&copy; 2023 <a href="https://odium.kr">Odium.kr </a> All Rights Reserved.<br> 	Odium.kr is not associated with NEXON Korea.</p>
+			</footer>
+			
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+			<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js'></script>
+			<script src="assets/js/carousel.js"></script>
+
+	</body>
+</html>
