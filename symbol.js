@@ -41,7 +41,7 @@ function setValue() {
 
   var dailyCount = difference * 5; //일퀘 5개 //10개로 언제 늘어남?
 
-  nowValue = nowValue + dailyCount + addition;
+  nowValue = nowValue + dailyCount + addition100 + addition80;
   // console.log(nowValue);
 
   while (nowValue > maxLevel[i]) {
