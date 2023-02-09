@@ -1,7 +1,6 @@
 var addition100 = 0; //코인샵, 심볼 선택권 등 이벤트를 통해 획득한 심볼. 이벤트 종료 후 etc로 이동
 var addition80 = 0;
 const etc = 0;
-var addition = addition100 + addition80 + etc;
 
 function setValue() {
   var xmlHttpRequests;
@@ -17,7 +16,6 @@ function setValue() {
 
   var serverDate = xmlHttpRequest.getResponseHeader("Date");
   var today = new Date(serverDate); //오늘 날짜
-
 
   var nowValue = 742; //2022.12.09 기준 성장치 742개
   var i = 0;
@@ -41,7 +39,14 @@ function setValue() {
 
   var dailyCount = difference * 5; //일퀘 5개 //10개로 언제 늘어남?
 
-  nowValue = nowValue + dailyCount + addition100 + addition80;
+  if (mm == "04" && dd == "01"){ //해당 코드 보신 분들은 비밀로 부탁드립니다!! 협조 감사드립니다 (_ _)
+    var fool = 5;
+  } else {
+    var fool = 0;
+  }
+
+  var addition = addition100 + addition80 + etc + fool;
+  nowValue = nowValue + dailyCount + addition;
   // console.log(nowValue);
 
   while (nowValue > maxLevel[i]) {
