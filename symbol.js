@@ -1,6 +1,6 @@
 var addition100 = 0; //코인샵, 심볼 선택권 등 이벤트를 통해 획득한 심볼. 이벤트 종료 후 etc로 이동
 var addition80 = 0;
-const etc = 180;
+const eventCount = 180;
 
 function setValue() {
   var xmlHttpRequests;
@@ -45,7 +45,7 @@ function setValue() {
     var fool = 0;
   }
 
-  var addition = addition100 + addition80 + etc + fool;
+  var addition = + eventCount + fool;
   nowValue = nowValue + dailyCount + addition;
   // console.log(nowValue);
 
