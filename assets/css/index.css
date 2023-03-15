@@ -385,7 +385,7 @@ a.btn.btn_focus {
   filter: brightness(50%);
 }
 .bg-odium {
-  background: #348cb2 url("images/bg-black.png") bottom left;
+  background: #348cb2 url("images/bg-odium_high.png") bottom left;
 }
 .bg-arcus {
   background: #d5a11e url("images/bg-arcus.png") bottom left;
