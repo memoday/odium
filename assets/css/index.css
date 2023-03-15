@@ -157,7 +157,6 @@ textarea {
   appearance: none;
 } */
 
-
 /* Basic */
 
 html {
@@ -192,7 +191,7 @@ body,
 select,
 textarea {
   color: #fff;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 15pt;
   font-weight: 300 !important;
   letter-spacing: 0em;
@@ -209,21 +208,21 @@ a {
   outline: 0;
   text-decoration: none;
 }
-a.btn{
+a.btn {
   border-bottom: none;
 }
 
 a:hover {
   border-color: transparent;
 }
-a.btn:hover{
+a.btn:hover {
   border-bottom: none;
   color: yellow;
-  transition: .5s;
+  transition: 0.5s;
 }
-a.btn.btn_focus{
+a.btn.btn_focus {
   color: gold;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #level {
@@ -235,7 +234,7 @@ a.btn.btn_focus{
 
 #level.active {
   display: block !important;
-  animation: fadein .3s !important;
+  animation: fadein 0.3s !important;
 }
 
 /* Icon */
@@ -385,13 +384,13 @@ a.btn.btn_focus{
   top: 0;
   filter: brightness(50%);
 }
-.bg-odium{
-  background: #348cb2 url("images/bg-odium_high.png") bottom left;
+.bg-odium {
+  background: #348cb2 url("images/bg-black.png") bottom left;
 }
-.bg-arcus{
+.bg-arcus {
   background: #d5a11e url("images/bg-arcus.png") bottom left;
 }
-.bg-cernium{
+.bg-cernium {
   background: #348cb2 url("images/bg-cernium.png") bottom left;
 }
 
@@ -834,9 +833,8 @@ a.btn.btn_focus{
   transform: scale(1.15);
 }
 #header nav img:active:not(:focus) {
-  transform: scale(1.0);
+  transform: scale(1);
 }
-
 
 #header nav a:before {
   -moz-transition: all 0.2s ease-in-out;
@@ -888,20 +886,20 @@ a.btn.btn_focus{
   overflow: visible;
   white-space: nowrap;
   color: white;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-#log li{
+#log li {
   float: left;
   opacity: 90%;
   font-size: 18px;
-  color:white;
-  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-#log.active{
+#log.active {
   display: flex !important;
-  animation: fadein .3s !important;
+  animation: fadein 0.3s !important;
 }
 
 /* Footer */
@@ -969,7 +967,6 @@ a.btn.btn_focus{
   text-align: center;
   width: 100%;
 }
-
 
 /* Wide */
 
