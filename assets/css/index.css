@@ -855,6 +855,7 @@ a.btn.btn_focus {
 
 #header nav a:hover {
   font-size: 1.1em;
+  white-space: nowrap;
 }
 
 #header nav a:hover:before {
