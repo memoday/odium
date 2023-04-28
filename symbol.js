@@ -1,18 +1,19 @@
 var addition100 = 0; //코인샵, 심볼 선택권 등 이벤트를 통해 획득한 심볼. 이벤트 종료 후 etc로 이동
 var addition80 = 0;
-const eventCount = 180;
+const eventCount = 280;
 
 function setValue() {
   var xmlHttpRequests;
-  if(window.XMLHttpRequest){// code for Firefox, Mozilla, IE7, etc.
+  if (window.XMLHttpRequest) {
+    // code for Firefox, Mozilla, IE7, etc.
     xmlHttpRequest = new XMLHttpRequest();
-  }else{
+  } else {
     return;
   }
 
-  xmlHttpRequest.open('HEAD', window.location.href.toString(), false);
+  xmlHttpRequest.open("HEAD", window.location.href.toString(), false);
   xmlHttpRequest.setRequestHeader("ContentType", "text/html");
-  xmlHttpRequest.send('');
+  xmlHttpRequest.send("");
 
   var serverDate = xmlHttpRequest.getResponseHeader("Date");
   var today = new Date(serverDate); //오늘 날짜
@@ -39,13 +40,14 @@ function setValue() {
 
   var dailyCount = difference * 5; //일퀘 5개 //10개로 언제 늘어남?
 
-  if (mm == "04" && dd == "01"){ //해당 코드 보신 분들은 비밀로 부탁드립니다!! 협조 감사드립니다 (_ _)
+  if (mm == "04" && dd == "01") {
+    //해당 코드 보신 분들은 비밀로 부탁드립니다!! 협조 감사드립니다 (_ _)
     var fool = 5;
   } else {
     var fool = 0;
   }
 
-  var addition = + eventCount + fool;
+  var addition = +eventCount + fool;
   nowValue = nowValue + dailyCount + addition;
   // console.log(nowValue);
 
@@ -77,13 +79,13 @@ valueBool = valueBool == "true";
 valueBool2 = localStorage.getItem("valueToggle80");
 valueBool2 = valueBool2 == "true";
 
-if (valueBool == null){
-  console.log('valueBool = null')
+if (valueBool == null) {
+  console.log("valueBool = null");
   valueBool = false;
 }
 
-if (valueBool2 == null){
-  console.log('valueBool2 = null')
+if (valueBool2 == null) {
+  console.log("valueBool2 = null");
   valueBool2 = false;
 }
 
@@ -96,33 +98,33 @@ valueToggle80();
 function valueToggle100() {
   valueBool = valueBool ? false : true;
 
-  if (valueBool == true){
+  if (valueBool == true) {
     addition100 = 100;
     oneHundred.classList.add("btn_focus");
     setValue();
-    localStorage.setItem("valueToggle100",true);
+    localStorage.setItem("valueToggle100", true);
   }
-  if (valueBool == false){
+  if (valueBool == false) {
     addition100 = 0;
     oneHundred.classList.remove("btn_focus");
     setValue();
-    localStorage.setItem("valueToggle100",false);
+    localStorage.setItem("valueToggle100", false);
   }
 }
 
 function valueToggle80() {
   valueBool2 = valueBool2 ? false : true;
 
-  if (valueBool2 == true){
+  if (valueBool2 == true) {
     addition80 = 80;
     eighty.classList.add("btn_focus");
     setValue();
-    localStorage.setItem("valueToggle80",true);
+    localStorage.setItem("valueToggle80", true);
   }
-  if (valueBool2 == false){
+  if (valueBool2 == false) {
     addition80 = 0;
     eighty.classList.remove("btn_focus");
     setValue();
-    localStorage.setItem("valueToggle80",false);
+    localStorage.setItem("valueToggle80", false);
   }
 }
