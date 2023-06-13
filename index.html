@@ -59,6 +59,20 @@
 
     gtag("config", "G-Q2XB0TQM81");
   </script>
+  <!-- <script src="mouseover.js"></script> -->
+  <script src="symbol.js"></script>
+  <script>
+    window.onload = function () {
+      document.body.classList.remove("is-preload");
+    };
+    window.ontouchmove = function () {
+      return false;
+    };
+    window.onorientationchange = function () {
+      document.body.scrollTop = 0;
+    };
+  </script>
+  
   <body class="is-preload">
     <div id="wrapper">
       <div id="bg" class="bg-odium"></div>
@@ -92,16 +106,11 @@
                   id="symbol1"
                   src="assets/css/images/symbol-odium.png"
                   style="cursor: pointer"
-                /><span id="level"></span>
+                /><span id="currnetLevel"></span>
               </li>
             </ul>
           </nav>
-          <p id="nowValue" class="nowValue"></p>
-          <div id="log" class="log">
-            <ul>
-              <!-- <li><a href="javascript:void(0);" id="oneHundred" class="btn" onclick="valueToggle100(); return false;">221222 웡스토랑 코인샵 x100</a></li>
-              <li><a href="javascript:void(0);" id="eighty" class="btn" onclick="valueToggle80(); return false;">230104 웡스토랑 쿠폰 x80</a></li> -->
-            </ul>
+          <p id="nowValue" class="nowValue">Loading..</p>
           </div>
         </header>
 
@@ -128,19 +137,10 @@
         </footer>
       </div>
     </div>
-    <script src="mouseover.js"></script>
-    <script src="symbol.js"></script>
     <script>
       window.onload = function () {
         setValue();
-        document.body.classList.remove("is-preload");
-      };
-      window.ontouchmove = function () {
-        return false;
-      };
-      window.onorientationchange = function () {
-        document.body.scrollTop = 0;
-      };
+      }
     </script>
   </body>
 </html>

@@ -225,16 +225,11 @@ a.btn.btn_focus {
   transition: 0.5s;
 }
 
-#level {
-  display: none;
+#currnetLevel {
+  display: block;
   position: absolute;
   margin-top: 5%;
   margin-left: 33%;
-}
-
-#level.active {
-  display: block !important;
-  animation: fadein 0.3s !important;
 }
 
 /* Icon */
