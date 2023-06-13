@@ -225,8 +225,8 @@ a.btn.btn_focus {
   transition: 0.5s;
 }
 
-#currnetLevel {
-  display: block;
+#currentLevel {
+  display: block !important;
   position: absolute;
   margin-top: 5%;
   margin-left: 33%;
