@@ -59,8 +59,6 @@
 
     gtag("config", "G-Q2XB0TQM81");
   </script>
-  <!-- <script src="mouseover.js"></script> -->
-  <script src="symbol.js"></script>
   <script>
     window.onload = function () {
       document.body.classList.remove("is-preload");
@@ -106,7 +104,7 @@
                   id="symbol1"
                   src="assets/css/images/symbol-odium.png"
                   style="cursor: pointer"
-                /><span id="currnetLevel"></span>
+                /><span id="level"></span>
               </li>
             </ul>
           </nav>
@@ -137,10 +135,9 @@
         </footer>
       </div>
     </div>
-    <script>
-      window.onload = function () {
-        setValue();
-      }
-    </script>
   </body>
+  <script src="symbol.js"></script>
+  <script>
+    setValue();
+  </script>
 </html>

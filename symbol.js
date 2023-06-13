@@ -57,7 +57,7 @@ function setValue() {
     nowLevel = i;
   }
 
-  document.getElementById("currentLevel").innerHTML = "Lv." + nowLevel;
+  document.getElementById("level").innerHTML = "Lv." + nowLevel;
   if (i >= 11) {
     var result = "COMPLETE!";
     document.getElementById("nowValue").style.color = "yellow";
@@ -70,61 +70,61 @@ function setValue() {
   document.getElementById("nowValue").innerHTML = result;
 }
 
-oneHundred = document.getElementById("oneHundred");
-eighty = document.getElementById("eighty");
+// oneHundred = document.getElementById("oneHundred");
+// eighty = document.getElementById("eighty");
 
-valueBool = localStorage.getItem("valueToggle100");
-valueBool = valueBool == "true";
+// valueBool = localStorage.getItem("valueToggle100");
+// valueBool = valueBool == "true";
 
-valueBool2 = localStorage.getItem("valueToggle80");
-valueBool2 = valueBool2 == "true";
+// valueBool2 = localStorage.getItem("valueToggle80");
+// valueBool2 = valueBool2 == "true";
 
-if (valueBool == null) {
-  console.log("valueBool = null");
-  valueBool = false;
-}
+// if (valueBool == null) {
+//   console.log("valueBool = null");
+//   valueBool = false;
+// }
 
-if (valueBool2 == null) {
-  console.log("valueBool2 = null");
-  valueBool2 = false;
-}
+// if (valueBool2 == null) {
+//   console.log("valueBool2 = null");
+//   valueBool2 = false;
+// }
 
-valueBool = !valueBool;
-valueToggle100();
+// valueBool = !valueBool;
+// valueToggle100();
 
-valueBool2 = !valueBool2;
-valueToggle80();
+// valueBool2 = !valueBool2;
+// valueToggle80();
 
-function valueToggle100() {
-  valueBool = valueBool ? false : true;
+// function valueToggle100() {
+//   valueBool = valueBool ? false : true;
 
-  if (valueBool == true) {
-    addition100 = 100;
-    oneHundred.classList.add("btn_focus");
-    setValue();
-    localStorage.setItem("valueToggle100", true);
-  }
-  if (valueBool == false) {
-    addition100 = 0;
-    oneHundred.classList.remove("btn_focus");
-    setValue();
-    localStorage.setItem("valueToggle100", false);
-  }
-}
+//   if (valueBool == true) {
+//     addition100 = 100;
+//     oneHundred.classList.add("btn_focus");
+//     setValue();
+//     localStorage.setItem("valueToggle100", true);
+//   }
+//   if (valueBool == false) {
+//     addition100 = 0;
+//     oneHundred.classList.remove("btn_focus");
+//     setValue();
+//     localStorage.setItem("valueToggle100", false);
+//   }
+// }
 
-function valueToggle80() {
-  valueBool2 = valueBool2 ? false : true;
+// function valueToggle80() {
+//   valueBool2 = valueBool2 ? false : true;
 
-  if (valueBool2 == true) {
-    addition80 = 80;
-    eighty.classList.add("btn_focus");
-    setValue();
-    localStorage.setItem("valueToggle80", true);
-  }
-  if (valueBool2 == false) {
-    addition80 = 0;
-    eighty.classList.remove("btn_focus");
-    setValue();
-    localStorage.setItem("valueToggle80", false);
-  }
-}
+//   if (valueBool2 == true) {
+//     addition80 = 80;
+//     eighty.classList.add("btn_focus");
+//     setValue();
+//     localStorage.setItem("valueToggle80", true);
+//   }
+//   if (valueBool2 == false) {
+//     addition80 = 0;
+//     eighty.classList.remove("btn_focus");
+//     setValue();
+//     localStorage.setItem("valueToggle80", false);
+//   }
+// }
