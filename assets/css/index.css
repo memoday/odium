@@ -225,12 +225,11 @@ a.btn.btn_focus {
   transition: 0.5s;
 }
 
-#currentLevel {
+/* .currentLevel {
   display: block !important;
   position: absolute;
-  margin-top: 5%;
   margin-left: 33%;
-}
+} */
 
 /* Icon */
 
@@ -377,16 +376,19 @@ a.btn.btn_focus {
   opacity: 1;
   position: fixed;
   top: 0;
-  filter: brightness(50%);
+  filter: brightness(55%);
 }
 .bg-odium {
-  background: #348cb2 url("images/bg-odium_high.png") bottom left;
+  background: #348cb2 url("images/bg-odium.png") bottom left;
 }
 .bg-arcus {
   background: #d5a11e url("images/bg-arcus.png") bottom left;
 }
 .bg-cernium {
   background: #348cb2 url("images/bg-cernium.png") bottom left;
+}
+.bg-shangrila2 {
+  background: #348cb2 url("images/bg-shangrila2.png") bottom left;
 }
 
 @-moz-keyframes bg {
@@ -716,7 +718,7 @@ a.btn.btn_focus {
 
 #header p {
   font-size: 1.5em;
-  margin: 0.75em 0 0.25em 0;
+  margin: 0.5em 0 0.25em 0;
   opacity: 1;
 }
 
