@@ -4,6 +4,51 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 270px;
+  height: 100vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 100;
+}
+
+#sidebar h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+#main-content {
+  margin-right: 0;
+  /* Adjust this value based on your sidebar width */
+}
+
+#sidebar:hover {
+  right: 0;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.label-text {
+  flex: 1;
+}
+
 html,
 body,
 div,
