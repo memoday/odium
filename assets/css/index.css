@@ -16,6 +16,7 @@
   z-index: 100;
   font-size: 14pt;
   user-select: none;
+  overflow-y: auto;
 }
 
 #sidebar h2 {
