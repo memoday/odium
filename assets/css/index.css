@@ -369,7 +369,7 @@ a.btn.btn_focus {
   }
 
   100% {
-    transform: translate3d(-2250px, 0, 0);
+    transform: translate3d(-1920px, 0, 0);
   }
 }
 
@@ -642,13 +642,13 @@ a.btn.btn_focus {
     }
 
     100% {
-      transform: translate3d(-1500px, 0, 0);
+      transform: translate3d(-1920px, 0, 0);
     }
   }
 
   #bg {
     background-size: contain;
-    width: 4500px;
+    width: 5040px;
   }
 }
 
@@ -672,13 +672,13 @@ a.btn.btn_focus {
     }
 
     100% {
-      transform: translate3d(-750px, 0, 0);
+      transform: translate3d(-1920px, 0, 0);
     }
   }
 
   #bg {
     background-size: contain;
-    width: 2250px;
+    width: 3840px;
   }
 }
 
@@ -706,13 +706,13 @@ a.btn.btn_focus {
     }
 
     100% {
-      transform: translate3d(-300px, 0, 0);
+      transform: translate3d(-1920px, 0, 0);
     }
   }
 
   #bg {
     background-size: contain;
-    width: 2250px;
+    width: 2944px;
   }
 
   /* Header */
