@@ -1,6 +1,6 @@
 const API_URL = "https://port-0-odium-fastapi-6g2llfhttxjl.sel3.cloudtype.app/";
 const API_URL_CALCULATOR =
-  "https://port-0-odium-fastapi-6g2llfhttxjl.sel3.cloudtype.app/calculator";
+  "https://port-0-odium-fastapi-6g2llfhttxjl.sel3.cloudtype.app/calculator/";
 
 function fetchSymbol() {
   fetch(API_URL)
@@ -24,7 +24,6 @@ function fetchSymbol() {
         );
         console.log(`shangrilaData: ${shangrilaData}`);
       }
-      console.log("first finished");
 
       const odiumCurrentValue = `${odiumData.currentValue}/${odiumData.currentLevelMaxValue}`;
       const shangrilaCurrentValue = `${shangrilaData.currentValue}/${shangrilaData.currentLevelMaxValue}`;
@@ -61,7 +60,6 @@ function fetchAdditionSymbol(symbol, counts) {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log("fetchAdditionSymbol Finished");
       return data;
     })
     .catch((error) => {
@@ -117,10 +115,9 @@ function loadCheckboxSettings() {
     });
   }
 }
-
-// Event listener to save checkbox settings when any checkbox is changed
+//체크박스 설정 저장 & fetchSymbol 다시 실행
 document.addEventListener("change", saveCheckboxSettings);
 document.addEventListener("change", fetchSymbol);
 
-// Load checkbox settings when the page loads
+//체크박스 설정 불러오기
 document.addEventListener("DOMContentLoaded", loadCheckboxSettings);
