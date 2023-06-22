@@ -72,20 +72,28 @@
   </script>
   
   <body class="is-preload">
+    <script src="symbolFetch.js"></script>
+    <script>
+      fetchSymbol();
+    </script>
     <div id="sidebar" class="closed">
       <h2>어센틱심볼 내역</h2>
       <ul>
-        <li>230616 일일퀘스트 보상 (10)</li>
-        <li>230610 쇼케이스 보상 (100)</li>
+        <li>230616 일일퀘스트 보상</li>
+        <li>230610 쇼케이스 보상</li>
       </ul>
-      <br>
-      <h2>심볼 선택권 추가 예정</h2>
-      <!-- <h2>보스 코인샵</h2>
+      <h2>바람주화 코인샵</h2>
       <ul>
+        <li><input type="checkbox" id="checkbox1" symbol="odium" additionValue="70"> <label for="checkbox1">오디움 교환권 (70)</label></li>
+        <li><input type="checkbox" id="checkbox2" symbol="shangrila" additionValue="40"> <label for="checkbox2">도원경 교환권 (40)</label></li>
       </ul>
       <h2>이덴티스크 기본탐험</h2>
       <ul>
-      </ul> -->
+        <li><input type="checkbox" id="checkbox3" symbol="shangrila" additionValue="40"> <label for="checkbox3">6일차 (40)</label></li>
+        <li><input type="checkbox" id="checkbox4" symbol="shangrila" additionValue="20"> <label for="checkbox4">8일차 (20) </label></li>
+        <li><input type="checkbox" id="checkbox5" symbol="shangrila" additionValue="40"> <label for="checkbox5">13일차 (40)</label></li>
+        <li><input type="checkbox" id="checkbox6" symbol="shangrila" additionValue="20"> <label for="checkbox6">15일차 (20)</label></li>
+      </ul>
     </div>
     <div id="wrapper">
       <div id="bg" class="bg-shangrila2"></div>
@@ -162,5 +170,4 @@
       </div>
     </div>
   </body>
-  <script src="symbolFetch.js"></script>
 </html>

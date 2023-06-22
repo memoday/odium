@@ -14,6 +14,8 @@
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 100;
+  font-size: 14pt;
+  user-select: none;
 }
 
 #sidebar h2 {
@@ -37,8 +39,9 @@ ul {
   list-style-type: none;
 }
 
-li {
+#sidebar li {
   margin-bottom: 10px;
+  font-size: 12pt;
 }
 
 input[type="checkbox"] {
@@ -136,6 +139,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  user-select: none;
 }
 
 article,
