@@ -72,10 +72,13 @@
   </script>
   
   <body class="is-preload">
-    <script src="symbolFetch.js"></script>
-  <script src="mainSidebar.js"></script>
     <div id="wrapper">
-      <div id="sidebar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="sidebar" class="close">
         <h2>어센틱심볼 내역</h2>
         <ul id="symbolHistory"></ul>
         <h2>바람주화 코인샵</h2>
@@ -154,6 +157,8 @@
         </footer>
       </div>
     </div>
+    <script src="symbolFetch.js"></script>
+    <script src="mainSidebar.js"></script>
     <script>updateSidebar(); fetchSymbol();</script>
   </body>
 </html>

@@ -145,3 +145,11 @@ function updateSidebar() {
     ulElement.appendChild(liElement);
   });
 }
+
+const hamburger = document.querySelector(".hamburger");
+const sidebar = document.getElementById("sidebar");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  sidebar.classList.toggle("open");
+});
