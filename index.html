@@ -74,19 +74,16 @@
   
   <body class="is-preload">
     <script src="symbolFetch.js"></script>
-    <script>
-      fetchSymbol();
-    </script>
-  <div id="sidebar">
-    <h2>어센틱심볼 내역</h2>
-    <ul id="symbolHistory"></ul>
-    <h2>바람주화 코인샵</h2>
-    <ul id="bossCoinShop"></ul>
-    <h2>이덴티스크 기본탐험</h2>
-    <ul id="identisk"></ul>
-  </div>
   <script src="mainSidebar.js"></script>
     <div id="wrapper">
+      <div id="sidebar">
+        <h2>어센틱심볼 내역</h2>
+        <ul id="symbolHistory"></ul>
+        <h2>바람주화 코인샵</h2>
+        <ul id="bossCoinShop"></ul>
+        <h2>이덴티스크 기본탐험</h2>
+        <ul id="identisk"></ul>
+      </div>
       <div id="bg" class="bg-shangrila2"></div>
       <div id="overlay"></div>
       <div id="main">
@@ -158,5 +155,6 @@
         </footer>
       </div>
     </div>
+    <script>updateSidebar(); fetchSymbol();</script>
   </body>
 </html>

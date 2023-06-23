@@ -114,31 +114,34 @@ const symbolData = [
   },
 ];
 
-symbolData.forEach((item, index) => {
-  const { label, symbol, additionValue, listId } = item;
-  const ulElement = document.getElementById(listId);
-  const liElement = document.createElement("li");
-  const checkboxElement = document.createElement("input");
-  checkboxElement.type = "checkbox";
-  checkboxElement.id = `checkbox${index}`;
-  checkboxElement.setAttribute("symbol", symbol);
-  checkboxElement.setAttribute("additionValue", additionValue);
-  const labelElement = document.createElement("label");
-  labelElement.htmlFor = `checkbox${index}`;
-  labelElement.textContent = label;
+function updateSidebar() {
+  historyData.forEach((item, index) => {
+    const { label, symbol, additionValue, listId } = item;
+    const ulElement = document.getElementById(listId);
+    const liElement = document.createElement("li");
+    const labelElement = document.createElement("label");
+    labelElement.textContent = label;
 
-  liElement.appendChild(checkboxElement);
-  liElement.appendChild(labelElement);
-  ulElement.appendChild(liElement);
-});
+    liElement.appendChild(labelElement);
+    ulElement.appendChild(liElement);
+  });
 
-historyData.forEach((item, index) => {
-  const { label, symbol, additionValue, listId } = item;
-  const ulElement = document.getElementById(listId);
-  const liElement = document.createElement("li");
-  const labelElement = document.createElement("label");
-  labelElement.textContent = label;
+  symbolData.forEach((item, index) => {
+    const { label, symbol, additionValue, listId } = item;
+    const ulElement = document.getElementById(listId);
+    const liElement = document.createElement("li");
+    const checkboxElement = document.createElement("input");
+    checkboxElement.type = "checkbox";
+    checkboxElement.id = `checkbox${index}`;
+    checkboxElement.setAttribute("symbol", symbol);
+    checkboxElement.setAttribute("additionValue", additionValue);
+    const labelElement = document.createElement("label");
+    labelElement.htmlFor = `checkbox${index}`;
+    labelElement.textContent = label;
+    labelElement.classList.add("checkbox-label");
 
-  liElement.appendChild(labelElement);
-  ulElement.appendChild(liElement);
-});
+    liElement.appendChild(checkboxElement);
+    liElement.appendChild(labelElement);
+    ulElement.appendChild(liElement);
+  });
+}

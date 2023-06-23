@@ -50,10 +50,6 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.label-text {
-  flex: 1;
-}
-
 html,
 body,
 div,
@@ -257,21 +253,6 @@ a.btn {
 a:hover {
   border-color: transparent;
 }
-a.btn:hover {
-  border-bottom: none;
-  color: yellow;
-  transition: 0.5s;
-}
-a.btn.btn_focus {
-  color: gold;
-  transition: 0.5s;
-}
-
-/* .currentLevel {
-  display: block !important;
-  position: absolute;
-  margin-left: 33%;
-} */
 
 /* Icon */
 
@@ -352,12 +333,6 @@ a.btn.btn_focus {
 }
 .bg-odium {
   background: #348cb2 url("images/bg-odium.png") bottom left;
-}
-.bg-arcus {
-  background: #d5a11e url("images/bg-arcus.png") bottom left;
-}
-.bg-cernium {
-  background: #348cb2 url("images/bg-cernium.png") bottom left;
 }
 .bg-shangrila2 {
   background: #348cb2 url("images/bg-shangrila2.png") bottom left;
@@ -607,11 +582,6 @@ a.btn.btn_focus {
 }
 
 #menubar {
-  background-image: linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.5) 75%,
-    rgba(0, 0, 0, 0)
-  );
   top: 0em;
   cursor: default;
   height: 6em;
