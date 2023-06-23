@@ -14,10 +14,10 @@
   padding: 20px;
   transition: right 0.3s ease;
   z-index: 100;
-  font-size: 14pt;
+  font-size: 13pt;
   user-select: none;
   overflow-y: auto;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background-color: rgba(92, 163, 219, 0.8);
 }
 
 #sidebar h2 {
