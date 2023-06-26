@@ -16,7 +16,7 @@
   font-size: 13pt;
   user-select: none;
   overflow-y: auto;
-  background-color: rgba(92, 163, 219, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #sidebar.close {
@@ -76,7 +76,7 @@ input[type="checkbox"] {
 
 .hamburger:hover span {
   transition: 0.3s ease;
-  background-color: skyblue;
+  background-color: darkgray;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -89,6 +89,23 @@ input[type="checkbox"] {
 
 .hamburger.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background-color: transparent; /* color of the track */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* color of the scrollbar */
+  border-radius: 4px; /* roundness of the scrollbar thumb */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* color of the scrollbar on hover */
 }
 
 html,
