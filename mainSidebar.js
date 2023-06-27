@@ -130,7 +130,9 @@ function updateSidebar() {
     const { label, symbol, additionValue, listId } = item;
     const ulElement = document.getElementById(listId);
     const liElement = document.createElement("li");
+    const checkboxContainerElement = document.createElement("label");
     const checkboxElement = document.createElement("input");
+    checkboxContainerElement.classList.add("checkbox-container");
     checkboxElement.type = "checkbox";
     checkboxElement.id = `checkbox${index}`;
     checkboxElement.setAttribute("symbol", symbol);
@@ -139,9 +141,13 @@ function updateSidebar() {
     labelElement.htmlFor = `checkbox${index}`;
     labelElement.textContent = label;
     labelElement.classList.add("checkbox-label");
+    const spanElement = document.createElement("span");
+    spanElement.classList.add("checkmark");
 
-    liElement.appendChild(checkboxElement);
-    liElement.appendChild(labelElement);
+    liElement.appendChild(checkboxContainerElement);
+    checkboxContainerElement.appendChild(checkboxElement);
+    checkboxContainerElement.appendChild(spanElement);
+    checkboxContainerElement.appendChild(labelElement);
     ulElement.appendChild(liElement);
   });
 }
