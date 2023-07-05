@@ -2,43 +2,58 @@ const API_URL = "https://port-0-odium-fastapi-6g2llfhttxjl.sel3.cloudtype.app/";
 const API_URL_CALCULATOR =
   "https://port-0-odium-fastapi-6g2llfhttxjl.sel3.cloudtype.app/calculator/";
 
+const symbols = [
+  {
+    name: "odium",
+    currentValueId: "odiumCurrentValue",
+    currentLevelId: "odiumCurrentLevel",
+  },
+  {
+    name: "shangrila",
+    currentValueId: "shangrilaCurrentValue",
+    currentLevelId: "shangrilaCurrentLevel",
+  },
+  {
+    name: "arteria",
+    currentValueId: "arteriaCurrentValue",
+    currentLevelId: "arteriaCurrentLevel",
+  },
+  // {
+  //   name: "carcion",
+  //   currentValueId: "carcionCurrentValue",
+  //   currentLevelId: "carcionCurrentLevel",
+  // },
+];
+
 function fetchSymbol() {
   fetch(API_URL)
     .then((response) => response.json())
     .then(async (data) => {
-      let odiumData = data.odium;
-      let shangrilaData = data.shangrila;
+      const additionData = getAddition();
+      const updatedSymbols = await Promise.all(
+        symbols.map(async (symbol) => {
+          let symbolData = data[symbol.name];
+          if (additionData[symbol.name] > 0) {
+            symbolData = await fetchAdditionSymbol(
+              symbol.name,
+              additionData[symbol.name]
+            );
+            // console.log(`${symbol.name}Data: ${symbolData}`);
+          }
 
-      let additionData = getAddition();
-      if (additionData.odiumAddition > 0) {
-        odiumData = await fetchAdditionSymbol(
-          "odium",
-          additionData.odiumAddition
-        );
-        console.log(`odiumData: ${odiumData}`);
-      }
-      if (additionData.shangrilaAddition > 0) {
-        shangrilaData = await fetchAdditionSymbol(
-          "shangrila",
-          additionData.shangrilaAddition
-        );
-        console.log(`shangrilaData: ${shangrilaData}`);
-      }
+          const currentValue = `${symbolData.currentValue}/${symbolData.currentLevelMaxValue}`;
+          document.getElementById(symbol.currentValueId).innerHTML =
+            currentValue;
+          document.getElementById(
+            symbol.currentLevelId
+          ).innerHTML = `Lv.${symbolData.currentLevel}`;
 
-      const odiumCurrentValue = `${odiumData.currentValue}/${odiumData.currentLevelMaxValue}`;
-      const shangrilaCurrentValue = `${shangrilaData.currentValue}/${shangrilaData.currentLevelMaxValue}`;
+          return { ...symbol, data: symbolData };
+        })
+      );
 
-      document.getElementById(
-        "odiumCurrentLevel"
-      ).innerHTML = `Lv.${odiumData.currentLevel}`;
-      document.getElementById("odiumCurrentValue").innerHTML =
-        odiumCurrentValue;
-
-      document.getElementById(
-        "shangrilaCurrentLevel"
-      ).innerHTML = `Lv.${shangrilaData.currentLevel}`;
-      document.getElementById("shangrilaCurrentValue").innerHTML =
-        shangrilaCurrentValue;
+      // You can access the updated symbols here for further processing
+      console.log(updatedSymbols);
     })
     .catch((error) => {
       console.error("Error occurred while fetching data:", error);
@@ -46,7 +61,7 @@ function fetchSymbol() {
 }
 
 function fetchAdditionSymbol(symbol, counts) {
-  let postData = {
+  const postData = {
     symbolName: symbol,
     counts: counts,
   };
@@ -69,22 +84,19 @@ function fetchAdditionSymbol(symbol, counts) {
 
 function getAddition() {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  let odiumAddition = 0;
-  let shangrilaAddition = 0;
+  const additionData = {};
 
   checkboxes.forEach((checkbox) => {
     const isChecked = checkbox.checked;
-    let value = isChecked
+    const value = isChecked
       ? parseInt(checkbox.getAttribute("additionValue"))
       : 0;
-    if (checkbox.getAttribute("symbol") == "odium") {
-      odiumAddition += value;
-    } else if (checkbox.getAttribute("symbol") == "shangrila") {
-      shangrilaAddition += value;
-    }
+    const symbol = checkbox.getAttribute("symbol");
+
+    additionData[symbol] = (additionData[symbol] || 0) + value;
   });
-  value = 0;
-  return { odiumAddition: odiumAddition, shangrilaAddition: shangrilaAddition };
+
+  return additionData;
 }
 
 function saveCheckboxSettings() {
@@ -115,9 +127,15 @@ function loadCheckboxSettings() {
     });
   }
 }
-//체크박스 설정 저장 & fetchSymbol 다시 실행
-document.addEventListener("change", saveCheckboxSettings);
-document.addEventListener("change", fetchSymbol);
 
-//체크박스 설정 불러오기
-document.addEventListener("DOMContentLoaded", loadCheckboxSettings);
+// Trigger fetchSymbol when checkbox state changes
+document.addEventListener("change", () => {
+  saveCheckboxSettings();
+  fetchSymbol();
+});
+
+// Load checkbox settings and fetchSymbol on page load
+document.addEventListener("DOMContentLoaded", () => {
+  loadCheckboxSettings();
+  fetchSymbol();
+});

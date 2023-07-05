@@ -573,7 +573,7 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   display: inline-block;
-  height: 3em;
+  height: auto;
   line-height: 1em;
   opacity: 0;
   position: relative;
@@ -581,11 +581,25 @@ a:hover {
   width: 5.35em;
 }
 
-#header nav li:nth-child(1) {
-  animation-delay: 2s;
+#header.symbolList nav li {
+  animation: nav-icons 0.5s ease-in-out forwards;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  display: inline-block;
+  height: auto;
+  line-height: 1em;
+  opacity: 0;
+  position: relative;
+  top: 0;
+  width: 5.35em;
+  margin-inline: 2.675em;
 }
 
-#header nav li:nth-child(2) {
+#header nav li {
+  animation-delay: 1.5s;
+}
+
+/* #header nav li:nth-child(2) {
   animation-delay: 2.25s;
 }
 
@@ -611,15 +625,7 @@ a:hover {
 
 #header nav li:nth-child(8) {
   animation-delay: 3.75s;
-}
-
-#header nav li:nth-child(9) {
-  animation-delay: 4s;
-}
-
-#header nav li:nth-child(10) {
-  animation-delay: 4.25s;
-}
+} */
 
 #header nav img {
   border: 0;
@@ -649,6 +655,12 @@ a:hover {
 }
 
 #header nav a:hover {
+  font-size: 1em;
+  white-space: nowrap;
+  color: #ccc;
+}
+
+#header.symbolList nav a:hover {
   font-size: 1.1em;
   white-space: nowrap;
 }
