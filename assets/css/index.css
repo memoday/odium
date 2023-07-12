@@ -430,6 +430,7 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
+  background-size: contain;
   background-repeat: repeat-x;
   height: 100%;
   left: 0;
@@ -444,6 +445,9 @@ a:hover {
 .bg-shangrila2 {
   background: #348cb2 url("images/bg-shangrila2.png") bottom left;
 }
+.bg-arteria {
+  background: #348cb2 url("images/bg-arteria.png") bottom left;
+}
 
 @keyframes bg {
   0% {
@@ -456,7 +460,6 @@ a:hover {
 }
 
 #bg {
-  background-size: contain;
   width: 6750px;
 }
 
@@ -740,7 +743,6 @@ a:hover {
   }
 
   #bg {
-    background-size: contain;
     width: 5040px;
   }
 }
@@ -770,7 +772,6 @@ a:hover {
   }
 
   #bg {
-    background-size: contain;
     width: 3840px;
   }
 }
@@ -804,7 +805,6 @@ a:hover {
   }
 
   #bg {
-    background-size: contain;
     width: 2944px;
   }
 
@@ -847,7 +847,6 @@ a:hover {
   }
 
   #bg {
-    background-size: contain;
     width: 2250px;
   }
 

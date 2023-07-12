@@ -53,7 +53,7 @@ function fetchSymbol() {
       );
 
       // You can access the updated symbols here for further processing
-      console.log(updatedSymbols);
+      // console.log(updatedSymbols);
     })
     .catch((error) => {
       console.error("Error occurred while fetching data:", error);
