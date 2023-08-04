@@ -18,11 +18,11 @@ const symbols = [
     currentValueId: "arteriaCurrentValue",
     currentLevelId: "arteriaCurrentLevel",
   },
-  // {
-  //   name: "carcion",
-  //   currentValueId: "carcionCurrentValue",
-  //   currentLevelId: "carcionCurrentLevel",
-  // },
+  {
+    name: "carcion",
+    currentValueId: "carcionCurrentValue",
+    currentLevelId: "carcionCurrentLevel",
+  },
 ];
 
 function fetchSymbol() {
