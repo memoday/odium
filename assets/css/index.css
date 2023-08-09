@@ -430,7 +430,7 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
-  background-size: contain;
+  background-size: 40%;
   background-repeat: repeat-x;
   height: 100%;
   left: 0;
