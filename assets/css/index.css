@@ -430,16 +430,18 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
-  background-size: 40%;
+  background-size: 100%, cover;
   background-repeat: repeat-x;
+  background: #348cb2 url("images/bg-carcion.png") bottom left;
   height: 100%;
   left: 0;
   opacity: 1;
   position: fixed;
   top: 0;
   filter: brightness(55%);
+  width: 500%;
 }
-.bg-odium {
+/* .bg-odium {
   background: #348cb2 url("images/bg-odium.png") bottom left;
 }
 .bg-shangrila2 {
@@ -447,10 +449,10 @@ a:hover {
 }
 .bg-arteria {
   background: #348cb2 url("images/bg-arteria.png") bottom left;
-}
-.bg-carcion {
+} */
+/* .bg-carcion {
   background: #348cb2 url("images/bg-carcion.png") bottom left;
-}
+} */
 
 @keyframes bg {
   0% {
@@ -458,12 +460,8 @@ a:hover {
   }
 
   100% {
-    transform: translate3d(-1920px, 0, 0);
+    transform: translate3d(calc(50vw - 50%), 0, 0);
   }
-}
-
-#bg {
-  width: 6750px;
 }
 
 /* Overlay */
@@ -734,20 +732,6 @@ a:hover {
   }
 
   /* BG */
-
-  @keyframes bg {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: translate3d(-1920px, 0, 0);
-    }
-  }
-
-  #bg {
-    width: 5040px;
-  }
 }
 
 /* Normal */
@@ -763,20 +747,6 @@ a:hover {
   }
 
   /* BG */
-
-  @keyframes bg {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: translate3d(-1920px, 0, 0);
-    }
-  }
-
-  #bg {
-    width: 3840px;
-  }
 }
 
 /* Mobile */
@@ -796,20 +766,6 @@ a:hover {
   }
 
   /* BG */
-
-  @keyframes bg {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: translate3d(-1920px, 0, 0);
-    }
-  }
-
-  #bg {
-    width: 2944px;
-  }
 
   /* Header */
 
@@ -838,20 +794,6 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   /* BG */
-
-  @keyframes bg {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: translate3d(-412.5px, 0, 0);
-    }
-  }
-
-  #bg {
-    width: 2250px;
-  }
 
   /* Header */
 
