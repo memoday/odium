@@ -414,7 +414,7 @@ a:hover {
 }
 
 #wrapper {
-  animation: wrapper 2s forwards;
+  animation: wrapper 0s forwards;
   height: 100%;
   left: 0;
   opacity: 0;
@@ -477,7 +477,7 @@ a:hover {
 }
 
 #overlay {
-  animation: overlay 1s 1s forwards;
+  animation: overlay 1s 0s forwards;
   background-attachment: fixed, fixed;
   background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
   background-position: top left, center center;
@@ -538,7 +538,7 @@ a:hover {
 }
 
 #header {
-  animation: header 1s 2.25s forwards;
+  animation: header 1s 1s forwards;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   cursor: default;
@@ -600,7 +600,7 @@ a:hover {
 }
 
 #header nav li {
-  animation-delay: 1.5s;
+  animation-delay: 0s;
 }
 
 /* #header nav li:nth-child(2) {
