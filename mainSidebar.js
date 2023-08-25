@@ -1,4 +1,6 @@
 const historyData = [
+  { label: "230827 썬데이 메이플", listId: "symbolHistory" },
+  { label: "230825 신입 디렉터 특별 선물", listId: "symbolHistory" },
   { label: "230616 일일퀘스트 보상", listId: "symbolHistory" },
   { label: "230610 쇼케이스 보상", listId: "symbolHistory" },
 ];
