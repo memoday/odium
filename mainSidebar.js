@@ -5,38 +5,7 @@ const historyData = [
   { label: "230610 쇼케이스 보상", listId: "symbolHistory" },
 ];
 
-const symbolData = [
-  {
-    label: "오디움 교환권 (70)",
-    symbol: "odium",
-    additionValue: "70",
-    listId: "bossCoinShop",
-  },
-  {
-    label: "도원경 교환권 (40)",
-    symbol: "shangrila",
-    additionValue: "40",
-    listId: "bossCoinShop",
-  },
-  {
-    label: "3단계 (20)",
-    symbol: "carcion",
-    additionValue: "20",
-    listId: "identiskFestival",
-  },
-  {
-    label: "8단계 (20)",
-    symbol: "carcion",
-    additionValue: "20",
-    listId: "identiskFestival",
-  },
-  {
-    label: "13단계 (20)",
-    symbol: "carcion",
-    additionValue: "20",
-    listId: "identiskFestival",
-  },
-];
+const symbolData = [];
 
 function updateSidebar() {
   historyData.forEach((item, index) => {
