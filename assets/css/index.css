@@ -430,16 +430,16 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0);
   /* Set your background with this */
-  background-size: 100%, cover;
-  background-repeat: repeat-x;
-  background: #348cb2 url("images/bg-carcion.png") bottom left;
+  background-size: 10%;
+  /* background-repeat: repeat-x; */
+  background: #348cb2 center 50% url("images/bg-carcion.png");
   height: 100%;
   left: 0;
   opacity: 1;
   position: fixed;
   top: 0;
   filter: brightness(55%);
-  width: 500%;
+  width: 100%;
 }
 /* .bg-odium {
   background: #348cb2 url("images/bg-odium.png") bottom left;
